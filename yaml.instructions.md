@@ -22,3 +22,4 @@ applyTo:
 - Repository rules come from `.yamllint`.
 - Run `pre-commit run yamllint -a` to verify locally.
 - Use `yq` for parsing and validation of YAML files, especially for long or complex files: `yq . file.yaml`.
+- [Find the right syntax for your YAML multiline strings](https://yaml-multiline.info/)
