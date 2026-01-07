@@ -9,10 +9,10 @@ applyTo:
 ## Badge Guidance
 
 - Use dynamic badges from shields.io; keep them on one line below the title.
-- Include a CodeRabbit PR reviews badge using reference links, e.g.:
-  - `[![CodeRabbit PR Reviews][coderabbit-image]][coderabbit-link]`
-  - `[coderabbit-image]: https://img.shields.io/coderabbit/prs/github/{org}/{repo}?utm_source=oss&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+PR+Reviews`
-  - `[coderabbit-link]: https://github.com/{org}/{repo}/pulls`
+- Include a PR reviews badge using reference links, e.g.:
+  - `[![PR Reviews][pr-reviews-image]][pr-reviews-link]`
+  - `[pr-reviews-image]: https://img.shields.io/github/issues-pr/{org}/{repo}?label=PR+Reviews&logo=github`
+  - `[pr-reviews-link]: https://github.com/{org}/{repo}/pulls`
 - Include a license badge linked to TLDRLegal using reference links, e.g.:
   - `[![License][license-image]][license-link]`
   - `[license-image]: https://img.shields.io/badge/License-MIT-blue.svg`
