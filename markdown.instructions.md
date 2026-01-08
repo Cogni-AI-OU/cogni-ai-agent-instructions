@@ -10,9 +10,10 @@ applyTo:
 
 The following markdown content rules are enforced in the validators:
 
-1. **Headings**: Use H1 (`#`), H2 (`##`), and H3 (`###`) heading levels to structure your content.
-   Avoid H4 (`####`) and deeper levels, as they suggest the content needs better organization or
-   should be split into separate documents.
+1. **Headings**: Use H2 (`##`) and H3 (`###`) heading levels to structure your content.
+   Do not use H1 (`#`), as this will be generated based on the document title. Avoid H4 (`####`)
+   and deeper levels, as they suggest the content needs better organization or should be split
+   into separate documents.
 2. **Lists**: Use bullet points or numbered lists for lists. Ensure proper indentation and spacing.
 3. **Code Blocks**: Use fenced code blocks for code snippets. Always specify the language for syntax
    highlighting (required for linting compliance).
