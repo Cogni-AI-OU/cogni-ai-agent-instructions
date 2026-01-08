@@ -55,8 +55,9 @@ The project enforces the following markdownlint rules:
 - Keep line length <=120 characters.
 - Surround headings and lists with blank lines; fence code blocks with blank lines.
 - Avoid trailing spaces; ensure a single trailing newline.
-- Table column style (MD060): follow the style defined in `.markdownlint.yaml`;
-  align pipes when `aligned` is required and remove extra spaces when `compact` is configured.
+- Table column style (MD060): follow the style defined in `.markdownlint.yaml`.
+  The default style is `compact`, which requires spaces around pipes in both header separators and data rows.
+  Example: `| ----- | ----------- |` not `|-------|-------------|`.
   Reflow columns with a markdown table formatter (for example, VS Code "Format Table"
   or `npx markdown-table`) to keep pipes consistent.
 - Avoid hard tabs (MD010/no-hard-tabs).
