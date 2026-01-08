@@ -35,7 +35,8 @@ applyTo:
 - Add a "Development" section for local workflows (e.g., `pre-commit run --all-files`, running tests).
 - Add a "Project Layout" section describing key directories (e.g., `.github/instructions/`, `.github/agents/`).
 - Add a "Contributing" section summarizing contribution expectations and linking to any contributing guide if present.
-- Add a "License" section that links to `LICENSE` and the TLDRLegal page for the project's license.
+- Add a "License" section that links to the local `LICENSE` file if it exists in the repository,
+  otherwise link to the TLDRLegal page for the project's license.
 - For lengthy READMEs, include a Table of Contents using a TOC block, e.g.:
 
   ```markdown
