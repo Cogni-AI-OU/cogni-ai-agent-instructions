@@ -1,6 +1,7 @@
 [submodule ".github/skills/cogni-ai-skills"]
 	path = .github/skills/cogni-ai-skills
 	url = https://github.com/Cogni-AI-OU/cogni-ai-agent-skills.git
+	shallow = true
 [submodule ".github/instructions"]
 	path = .github/instructions
 	url = https://github.com/Cogni-AI-OU/.github
