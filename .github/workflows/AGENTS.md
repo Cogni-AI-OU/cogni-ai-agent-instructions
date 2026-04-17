@@ -87,6 +87,6 @@ The `model` input options for `workflow_dispatch` must be identical in both work
 
 ## Notes
 
-- Follow [github-workflows.instruction.md](../../github-workflows.instruction.md)
+- Follow [github-workflows.instruction.md](../../github-workflows/github-workflows.instruction.md)
   when editing workflow files (ordering, formatting, validation).
 - Keep this catalog updated when workflows are added, removed, or renamed.

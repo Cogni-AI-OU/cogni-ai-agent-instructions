@@ -39,8 +39,8 @@
     },
     {
       "title": "Instructions Directory",
-      "description": "## Repository-Wide Coding Standards\n\nThe `.github/instructions/` directory contains detailed guidelines for different file types:\n\n- **markdown.instructions.md**: Markdown formatting rules\n- **yaml.instructions.md**: YAML formatting standards\n- **ansible.instructions.md**: Ansible best practices\n- **blog.instructions.md**: Blog post requirements\n- **readme.instructions.md**: README.md specific guidelines\n\nThese files use the `applyTo` frontmatter to scope rules to specific file patterns and are integrated with GitHub Copilot.",
-      "directory": ".github/instructions"
+      "description": "## Repository-Wide Coding Standards\n\nThere are detailed guidelines for different file types located in their respective directories:\n\n- **markdown/markdown.instructions.md**: Markdown formatting rules\n- **yaml/yaml.instructions.md**: YAML formatting standards\n- **ansible/ansible.instructions.md**: Ansible best practices\n- **blog/blog.instructions.md**: Blog post requirements\n- **readme/readme.instructions.md**: README.md specific guidelines\n\nThese files use the `applyTo` frontmatter to scope rules to specific file patterns and are integrated with GitHub Copilot.",
+      "file": "markdown/markdown.instructions.md"
     },
     {
       "title": "Pre-commit Configuration",

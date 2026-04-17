@@ -328,7 +328,7 @@ exist. Do not skip items just because a file already exists.
 
 - [ ] **Create or update repository README.md**
   - Check if `README.md` exists
-  - Reference instructions: `https://github.com/Cogni-AI-OU/.github/blob/main/.github/instructions/readme.instructions.md`
+  - Reference instructions: `https://github.com/Cogni-AI-OU/.github/blob/main/readme/readme.instructions.md`
   - Purpose: Main documentation for repository
   - Action: Ensure it follows organization standards
   - Required sections: Project overview, getting started, development, structure, contributing, license
@@ -399,26 +399,19 @@ exist. Do not skip items just because a file already exists.
   - Content: Project overview, coding standards, formatting guidelines, troubleshooting
   - Customize: Add repository-specific standards, dependencies, build/test commands
 
-- [ ] **`.github/instructions/` directory**
-  - Check if directory exists with language-specific instruction files
-  - Reference: `https://github.com/Cogni-AI-OU/.github/tree/main/.github/instructions`
+- [ ] **Language-specific instructions**
+  - Check if language-specific instruction directories exist
+  - Reference: `https://github.com/Cogni-AI-OU/.github/tree/main/`
   - Purpose: Detailed formatting and content rules for different file types
   - Action: Copy relevant instruction files based on languages used in repository
   - Available files:
-    - `README.md` - Overview of instructions
-    - `ansible.instructions.md` - Ansible conventions
-    - `blog.instructions.md` - Blog post standards (if applicable)
-    - `json.instructions.md` - JSON formatting
-    - `markdown.instructions.md` - Markdown standards
-    - `readme.instructions.md` - README guidelines
-    - `yaml.instructions.md` - YAML formatting
+    - `ansible/ansible.instructions.md` - Ansible conventions
+    - `blog/blog.instructions.md` - Blog post standards (if applicable)
+    - `json/json.instructions.md` - JSON formatting
+    - `markdown/markdown.instructions.md` - Markdown standards
+    - `readme/readme.instructions.md` - README guidelines
+    - `yaml/yaml.instructions.md` - YAML formatting
   - Customize: Only include files relevant to languages/formats used in repository
-
-- [ ] **`.github/instructions/AGENTS.md`**
-  - Check if file exists
-  - Reference: `https://github.com/Cogni-AI-OU/.github/blob/main/.github/instructions/AGENTS.md`
-  - Purpose: Catalog of instruction files with scopes for agents
-  - Action: Create if missing and keep in sync when instruction files change
 
 - [ ] **`.github/agents/` directory**
   - Check if directory exists with custom agent files

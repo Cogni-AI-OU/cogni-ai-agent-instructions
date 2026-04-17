@@ -330,7 +330,7 @@ molecule syntax
 
 ### Updating Coding Standards
 
-- Language-specific instructions are in the root directory
+- Language-specific instructions are in their respective directories
 - Update `.markdownlint.yaml`, `.yamllint`, or `.editorconfig` for linting rules
 - Run `pre-commit run -a` to verify changes pass all checks
 
@@ -424,12 +424,12 @@ For a human-readable overview, see [README.md](README.md).
 | Instruction | Scope | Purpose |
 | ----------- | ----- | ------- |
 | [README.md](README.md) | All instructions | Overview of instruction purpose and validation tooling |
-| [ansible.instructions.md](ansible.instructions.md) | Ansible roles and playbooks | Conventions, idempotency, and linting for Ansible content |
-| [github-workflows.instruction.md](github-workflows.instruction.md) | .github/workflows and workflow-templates | Ordering, formatting, validation for GitHub Actions workflows |
-| [json.instructions.md](json.instructions.md) | **/*.json | Formatting rules for JSON and JSONC |
-| [markdown.instructions.md](markdown.instructions.md) | **/*.md | Markdown structure and linting expectations |
-| [readme.instructions.md](readme.instructions.md) | Repository README.md | Layout, badges, and content guidance for the main README |
-| [yaml.instructions.md](yaml.instructions.md) | **/*.{yaml,yml} | YAML formatting and linting rules |
+| [ansible.instructions.md](ansible/ansible.instructions.md) | Ansible roles and playbooks | Conventions, idempotency, and linting for Ansible content |
+| [github-workflows.instruction.md](github-workflows/github-workflows.instruction.md) | .github/workflows and workflow-templates | Ordering, formatting, validation for GitHub Actions workflows |
+| [json.instructions.md](json/json.instructions.md) | **/*.json | Formatting rules for JSON and JSONC |
+| [markdown.instructions.md](markdown/markdown.instructions.md) | **/*.md | Markdown structure and linting expectations |
+| [readme.instructions.md](readme/readme.instructions.md) | Repository README.md | Layout, badges, and content guidance for the main README |
+| [yaml.instructions.md](yaml/yaml.instructions.md) | **/*.{yaml,yml} | YAML formatting and linting rules |
 
 ### Usage
 
