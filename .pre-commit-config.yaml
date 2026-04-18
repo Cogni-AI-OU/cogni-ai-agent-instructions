@@ -92,6 +92,7 @@ repos:
           - --config
           - .markdown-link-check.json
           - --quiet
+        exclude: ^\.github/skills/cogni-ai-skills/
   - repo: https://github.com/Yelp/detect-secrets
     rev: v1.5.0
     hooks:
