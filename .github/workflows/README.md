@@ -74,13 +74,6 @@ It can be invoked via slash commands (`/oc`, `/opencode`) on issue and PR commen
 
 The `opencode-review.yml` workflow provides OpenCode-driven PR review capabilities.
 
-## Workflow Templates
-
-The `../workflow-templates/` directory contains reference workflows that are not
-actively executed but are preserved for future use or copying to other
-repositories. These templates can be customized and moved to the `workflows/`
-directory when needed.
-
 ## Agent Prompts
 
 The `../prompts/` directory contains ready-to-use prompts for AI agents to perform
