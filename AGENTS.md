@@ -10,18 +10,13 @@ Read and merge these when operating inside corresponding sub-directories (order 
 
 - `.opencode/AGENTS.md`
 - [`.github/AGENTS.md`](.github/AGENTS.md)
-- [`.github/skills/AGENTS.md`](.github/skills/AGENTS.md) to discover the available
-  skill catalog before interpreting the user request
 - [`.vscode/AGENTS.md`](.vscode/AGENTS.md) (command permissions and tasks)
 - Any `AGENTS.md` or `SKILL.md` in ancestor, then current directory tree
 
 ## Mandatory Skill Loading Protocol
 
 - Before any tool invocation, code delta, or execution plan, MUST read
-  [`.github/skills/AGENTS.md`](.github/skills/AGENTS.md) when present.
-- Treat [`.github/skills/AGENTS.md`](.github/skills/AGENTS.md) as the
-  authoritative catalog of available skills; follow its links to candidate
-  `SKILL.md` files.
+  any available `SKILL.md` workflows before formulating a strategy.
 - Deterministically route user intent to skills in this order: exact
   skill-name match, exact alias/tag match, normalized phrase match,
   description/activation keyword match.
@@ -280,7 +275,7 @@ pre-commit run yamllint -a
   performing complex regex parsing, or safely editing a few lines in-place within an automated script context.
   It is especially useful for large files where patching the whole file via MCP could take a lot of context
   processing for simple changes.
-- For detailed commands and examples, see `.github/skills/vim-ex/SKILL.md`.
+- For detailed commands and examples, see `SKILL.md` entries for `vim-ex`.
 
 ### Renaming/removing files
 
@@ -346,7 +341,7 @@ on top of the updated target branch:
 5. Verify only your changes remain
 
 **For detailed step-by-step instructions with commands**, see:
-`.github/skills/git/SKILL.md`
+`SKILL.md` workflows for `git`.
 
 ### Key Points
 
@@ -379,7 +374,8 @@ tries to auto-rebase (e.g., 113 commits), it encounters conflicts it cannot reso
 **Error Patterns:** `Rebasing (1/XXX)` with large numbers, `CONFLICT (content)`, session crash with `GitError`
 
 **For complete details**, see:
-`.github/skills/git/SKILL.md` - "Working with Automation Tools"
+`git/SKILL.md`
+ - "Working with Automation Tools"
 
 ## References
 
