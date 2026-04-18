@@ -391,9 +391,10 @@ exist. Do not skip items just because a file already exists.
   - Format: JSON file with `contextFileName` property
   - Example: `{ "contextFileName": "AGENTS.md" }`
 
-- [ ] **`.github/copilot-instructions.md`**
-  - Check if file exists
-  - Reference: `https://github.com/Cogni-AI-OU/.github/blob/main/.github/copilot-instructions.md`
+- [ ] **`copilot/copilot.instructions.md`**
+
+  - Purpose: Coding standards and project context
+  - Reference: `https://github.com/Cogni-AI-OU/.github/blob/main/copilot/copilot.instructions.md`
   - Purpose: Comprehensive coding standards for GitHub Copilot
   - Action: Create if missing, adapted for repository language/framework
   - Content: Project overview, coding standards, formatting guidelines, troubleshooting
@@ -420,7 +421,6 @@ exist. Do not skip items just because a file already exists.
   - Action: Copy relevant agent files based on repository needs
   - Required agents:
     - `code-tour.agent.md` - For creating/updating `.tours/` files (always include)
-    - `cogni-ai.agent.md` - Enhanced Agent with critical thinking
   - Other files:
     - `AGENTS.md` - Instruction file with scopes for agents (always include)
     - `FIREWALL.md` - Firewall allowlist for Copilot agents (always include)

@@ -79,7 +79,7 @@ Read and merge these when operating inside corresponding sub-directories (order 
   environment and upstream dependencies. If the root cause originates outside the repository scope,
   state the required upstream fix clearly and halt rather than introducing local entropy.
 - Read, assimilate, and strictly enforce the invariants defined in the main `AGENTS.md`,
-  along with any directory-specific `AGENTS.md` and related files, `.github/copilot-instructions.md`,
+  along with any directory-specific `AGENTS.md` and related files, `copilot/copilot.instructions.md`,
   and autonomously load any relevant `.instructions.md` rules or `SKILL.md` workflows before formulating a strategy.
 - Declare required inputs, missing context, edge cases, and optimal strategy before any tool invocation or code delta.
 - Snapshot current problem state in one entropy-minimized sentence.
@@ -202,7 +202,7 @@ the agent MUST integrate remote changes with a merge commit workflow.
 ## Required References
 
 - Project overview & install: [README.md](README.md)
-- Agent configuration & conventions: [.github/copilot-instructions.md](.github/copilot-instructions.md)
+- Agent configuration & conventions: [copilot/copilot.instructions.md](copilot/copilot.instructions.md)
 - Workflow navigation: [.tours/getting-started.tour](.tours/getting-started.tour)
 - Latest org baseline: <https://github.com/Cogni-AI-OU/.github/blob/main/AGENTS.md>
 
@@ -425,11 +425,12 @@ For a human-readable overview, see [README.md](README.md).
 | ----------- | ----- | ------- |
 | [README.md](README.md) | All instructions | Overview of instruction purpose and validation tooling |
 | [ansible.instructions.md](ansible/ansible.instructions.md) | Ansible roles and playbooks | Conventions, idempotency, and linting for Ansible content |
-| [github-workflows.instruction.md](github-workflows/github-workflows.instruction.md) | .github/workflows and workflow-templates | Ordering, formatting, validation for GitHub Actions workflows |
+| [github-workflows.instructions.md](github-workflows/github-workflows.instructions.md) | .github/workflows and workflow-templates | Ordering, formatting, validation for GitHub Actions workflows |
 | [json.instructions.md](json/json.instructions.md) | **/*.json | Formatting rules for JSON and JSONC |
 | [markdown.instructions.md](markdown/markdown.instructions.md) | **/*.md | Markdown structure and linting expectations |
 | [readme.instructions.md](readme/readme.instructions.md) | Repository README.md | Layout, badges, and content guidance for the main README |
 | [yaml.instructions.md](yaml/yaml.instructions.md) | **/*.{yaml,yml} | YAML formatting and linting rules |
+| [copilot.instructions.md](copilot/copilot.instructions.md) | Copilot | Coding standards and project context |
 
 ### Usage
 

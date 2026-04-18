@@ -15,7 +15,8 @@ For more information, see
 ## Skills catalog
 
 The full, machine-readable list of skills lives in
-[cogni-ai-skills/AGENTS.md](cogni-ai-skills/AGENTS.md). Use it when you need the authoritative catalog for
+[cogni-ai-skills/AGENTS.md](cogni-ai-skills/AGENTS.md).
+Use it when you need the authoritative catalog for
 agent loading. This README stays human-focused.
 
 ## Creating skills
@@ -59,7 +60,7 @@ the skill's directory.
 
 ## Skills vs custom instructions
 
-- **Custom instructions** (`copilot-instructions.md`): Simple guidance relevant
+- **Custom instructions** (`copilot/copilot.instructions.md`): Simple guidance relevant
   to almost every task (coding standards, repository conventions)
 - **Skills**: Detailed instructions that Copilot accesses only when relevant to
   a specific task

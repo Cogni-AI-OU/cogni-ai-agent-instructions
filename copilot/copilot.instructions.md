@@ -97,19 +97,20 @@ runtime and as the source of required controller-side dependencies.
 
 ```text
 .
-├── .github/
-│   ├── ISSUE_TEMPLATE/      # Issue templates (bug reports, feature requests)
-│   ├── agents/              # AI agent configurations
-│   ├── skills/              # Agent skills definitions
-│   ├── workflows/           # GitHub Actions workflows
-│   ├── copilot-instructions.md
-│   └── pull_request_template.md
-├── .tours/                   # VS Code guided tours
-├── profile/
-│   └── README.md             # Organization profile (shown on GitHub org page)
-├── AGENTS.md                 # AI agent guidance
-├── CODE_OF_CONDUCT.md        # Community standards
-└── README.md                 # Repository documentation
+|-- .github/
+|   |-- ISSUE_TEMPLATE/      # Issue templates (bug reports, feature requests)
+|   |-- agents/              # AI agent configurations
+|   |-- skills/              # Agent skills definitions
+|   |-- workflows/           # GitHub Actions workflows
+|   |-- pull_request_template.md
+|-- .tours/                   # VS Code guided tours
+|-- copilot/
+|   |-- copilot.instructions.md
+|-- profile/
+|   |-- README.md             # Organization profile (shown on GitHub org page)
+|-- AGENTS.md                 # AI agent guidance
+|-- CODE_OF_CONDUCT.md        # Community standards
+|-- README.md                 # Repository documentation
 ```
 
 ### Tours
