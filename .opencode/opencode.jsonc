@@ -5,15 +5,6 @@
     ".github/copilot-instructions.md"
   ],
   "agent": {
-    "cogni-ai": {
-      "mode": "primary",
-      "model": "opencode/gemini-3.1-pro",
-      "prompt": "{file:../.github/agents/cogni-ai.agent.md}",
-      "tools": {
-        "write": true,
-        "edit": true,
-        "bash": true
-      },
       // Keep shell permissions aligned with .vscode/settings.json allowlist and in alphabetical order.
       "permission": {
         "bash": {
