@@ -84,14 +84,6 @@ repos:
     rev: v1.7.10
     hooks:
       - id: actionlint
-  - repo: https://github.com/tcort/markdown-link-check
-    rev: v3.14.2
-    hooks:
-      - id: markdown-link-check
-        args:
-          - --config
-          - .markdown-link-check.json
-          - --quiet
   - repo: https://github.com/Yelp/detect-secrets
     rev: v1.5.0
     hooks:

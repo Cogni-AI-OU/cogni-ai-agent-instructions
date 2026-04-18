@@ -8,7 +8,6 @@ For general project invariants see [README.md](README.md).
 
 Read and merge these when operating inside corresponding sub-directories (order = precedence):
 
-- `.opencode/AGENTS.md`
 - [`.github/AGENTS.md`](.github/AGENTS.md)
 - [`.github/skills/AGENTS.md`](.github/skills/AGENTS.md) to discover the available
   skill catalog before interpreting the user request
@@ -286,19 +285,6 @@ pre-commit run yamllint -a
 
 - Use `git mv`, `git rm`, or equivalent Git-aware tooling (instead of `mv` or `rm`) to preserve history
   when working with files under source control.
-
-## Feature-specific Notes
-
-### opencode
-
-OpenCode (if installed), it uses XDG base directories (not a single `~/.opencode` dir):
-
-| Directory                 | Purpose                                                |
-| ------------------------- | ------------------------------------------------------ |
-| `~/.local/share/opencode` | Data **and** auth credentials (`auth.json` lives here) |
-| `~/.config/opencode`      | User configuration (`opencode.json`/`opencode.jsonc`)  |
-| `~/.cache/opencode`       | Ephemeral binary cache - not worth persisting          |
-| `~/.local/state/opencode` | Runtime state - not worth persisting                   |
 
 ## Tooling
 

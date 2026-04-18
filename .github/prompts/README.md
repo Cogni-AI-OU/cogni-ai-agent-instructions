@@ -41,8 +41,8 @@ model configuration.
 
    ```text
    /opencode Please follow the checklist in
-   https://github.com/Cogni-AI-OU/.github/blob/main/.github/prompts/repository-setup.prompt.md
-   to review and update this repository's configuration.
+   https://github.com/Cogni-AI-OU/.github/blob/main/.github/prompts/pr-review.prompt.md
+   to review this pull request.
    ```
 
 2. **Directly**: Copy the prompt content and paste it into an OpenCode conversation.
@@ -51,10 +51,10 @@ model configuration.
 
 1. **In VS Code Chat**: Open Copilot Chat and reference the prompt:
 
-   ```text
-   @workspace Please follow the repository setup checklist from
-   .github/prompts/repository-setup.prompt.md to standardize this repository.
-   ```
+    ```text
+    @workspace Please follow the PR review checklist from
+    .github/prompts/pr-review.prompt.md to review my changes.
+    ```
 
 2. **In Pull Request**: Create a PR and ask Copilot to review using the prompt guidelines.
 
@@ -112,35 +112,24 @@ When creating prompt files:
 
 ## Examples
 
-### Example 1: Complete Repository Setup
+### Example 1: Pull Request Review
 
 ```text
-/oc I need you to set up this repository following organization standards.
-Please use the repository-setup.prompt.md checklist and:
+/oc I need you to review this pull request following organization standards.
+Please use the pr-review.prompt.md checklist and:
 
-1. Review all configuration files
-2. Create missing files
-3. Set up workflows using remote references
-4. Configure devcontainer
-5. Create documentation
-6. Validate everything works
+1. Review all code changes
+2. Check for potential bugs or issues
+3. Ensure adherence to coding standards
+4. Validate documentation updates
 
-Report progress after each phase.
+Report your findings.
 ```
 
-### Example 2: Partial Setup (Workflows Only)
+### Example 2: Minimal Task
 
 ```text
-/opencode Please follow Phase 3 of the repository-setup.prompt.md to add
-GitHub Actions workflows to this repository. Use workflow_call to reference
-remote workflows from Cogni-AI-OU/.github.
-```
-
-### Example 3: Validation Only
-
-```text
-/opencode Please follow Phase 9 of repository-setup.prompt.md to validate
-all configuration files in this repository. Run linters and report any issues.
+/opencode Please use the test.prompt.yml to perform a quick validation.
 ```
 
 ## Contributing
