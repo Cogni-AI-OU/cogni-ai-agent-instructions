@@ -5,17 +5,6 @@ These agents are tailored to specific tasks and integrate seamlessly with GitHub
 
 ## Available Agents
 
-### [Code Tour Expert](code-tour.agent.md)
-
-Expert agent for creating and maintaining VSCode CodeTour files. Features:
-
-- Creating `.tours/` files with proper CodeTour schema
-- Designing step-by-step walkthroughs for complex codebases
-- Implementing interactive tours with command links and code snippets
-- Setting up primary tours and tour linking sequences
-
-**When to use**: Anytime you need to create or update `.tour` files for repository onboarding.
-
 ## How to Use Custom Agents
 
 ### Installation
