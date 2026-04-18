@@ -90,7 +90,6 @@ workflow, local OpenCode, and VS Code auto-approve configs.
 | ---- | -------- |
 | [opencode.yml](opencode.yml) | Line ~130 (env section) |
 | [opencode-review.yml](opencode-review.yml) | Line ~210 (env section) |
-| [.opencode/opencode.jsonc](../../.opencode/opencode.jsonc) | `agent.cogni-ai.permission.bash` |
 | [.vscode/settings.json](../../.vscode/settings.json) | `chat.tools.terminal.autoApprove` |
 
 ### Model options list

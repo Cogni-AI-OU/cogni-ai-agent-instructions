@@ -8,7 +8,6 @@ For general project invariants see [README.md](README.md).
 
 Read and merge these when operating inside corresponding sub-directories (order = precedence):
 
-- `.opencode/AGENTS.md`
 - [`.github/AGENTS.md`](.github/AGENTS.md)
 - [`.vscode/AGENTS.md`](.vscode/AGENTS.md) (command permissions and tasks)
 - Any `AGENTS.md` or `SKILL.md` in ancestor, then current directory tree
@@ -283,17 +282,6 @@ pre-commit run yamllint -a
   when working with files under source control.
 
 ## Feature-specific Notes
-
-### opencode
-
-OpenCode (if installed), it uses XDG base directories (not a single `~/.opencode` dir):
-
-| Directory                 | Purpose                                                |
-| ------------------------- | ------------------------------------------------------ |
-| `~/.local/share/opencode` | Data **and** auth credentials (`auth.json` lives here) |
-| `~/.config/opencode`      | User configuration (`opencode.json`/`opencode.jsonc`)  |
-| `~/.cache/opencode`       | Ephemeral binary cache - not worth persisting          |
-| `~/.local/state/opencode` | Runtime state - not worth persisting                   |
 
 ## Tooling
 
