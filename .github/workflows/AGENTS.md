@@ -8,6 +8,8 @@ For a human-readable overview, see [README.md](README.md).
 ## Workflow catalog
 
 - **[check.yml](check.yml)**: Linting and quality gates via actionlint and pre-commit.
+- **[cogni-ai-agent.yml](cogni-ai-agent.yml)**: Logic for the Cogni AI Agent.
+- **[copilot-setup-steps.yml](copilot-setup-steps.yml)**: Environment setup utility.
 - **[devcontainer-ci.yml](devcontainer-ci.yml)**: Build/test devcontainer and required tools/packages.
 - **[opencode.yml](opencode.yml)**: OpenCode agent invocation via comments or manual triggers.
 - **[opencode-review.yml](opencode-review.yml)**: OpenCode PR review.
@@ -23,6 +25,21 @@ For a human-readable overview, see [README.md](README.md).
   since normal `pull_request` events don't trigger for bot actors.
 - Reusable: `uses: Cogni-AI-OU/.github/.github/workflows/check.yml@main`.
 - Jobs: `actionlint`, `link-checker`, `pre-commit`.
+
+### cogni-ai-agent.yml
+
+- Purpose: provides the underlying logic to run the Cogni AI Agent.
+- Triggers: `issue_comment`, `pull_request_review_comment`, `workflow_dispatch`.
+- Details: Installs Python dependencies from `.devcontainer/requirements.txt` and calls the
+  `Cogni-AI-OU/cogni-ai-agent-action` to process instructions.
+- Permissions: `contents: write`, `id-token: write`, `issues: write`, `pull-requests: write`.
+
+### copilot-setup-steps.yml
+
+- Purpose: utility workflow for setting up the environment.
+- Triggers: `push` and `pull_request` on `copilot-setup-steps.yml` or `.devcontainer/requirements.txt`.
+- Details: Checks out repo, sets up Python 3.12, restores cache, and installs dependencies.
+- Permissions: `contents: read`.
 
 ### devcontainer-ci.yml
 
@@ -78,12 +95,13 @@ workflow, local OpenCode, and VS Code auto-approve configs.
 
 ### Model options list
 
-The `model` input options for `workflow_dispatch` must be identical in both workflow files:
+The `model` input options for `workflow_dispatch` must be identical in all workflow files:
 
 | File | Location |
 | ---- | -------- |
 | [opencode.yml](opencode.yml) | Lines ~48-90 (workflow_dispatch inputs) |
 | [opencode-review.yml](opencode-review.yml) | Lines ~67-107 (workflow_dispatch inputs) |
+| [cogni-ai-agent.yml](cogni-ai-agent.yml) | `workflow_dispatch` inputs |
 
 ## Notes
 
