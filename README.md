@@ -91,7 +91,6 @@ This repository provides AI agent configurations for automated development.
 | [AGENTS.md](AGENTS.md) | All agents | Repository-specific guidance and workflows |
 | [copilot/copilot.instructions.md](copilot/copilot.instructions.md) | Copilot | Coding standards and project context |
 | [.github/agents/](.github/agents/) | Orchestrators | Specialized agent configs for specific tasks |
-| [.github/skills/](.github/skills/) | All agents | Reusable capabilities (git, GitHub Actions, etc.) |
 | [.github/prompts/](.github/prompts/) | All | Prompt templates (`.md` for VSCode, `.yaml` for GitHub Models) |
 | [Instructions Catalog](AGENTS.md#instructions-catalog-for-agents) | All | Available coding instructions |
 
@@ -103,7 +102,7 @@ See also:
 ## GitHub Actions
 
 For documentation on GitHub Actions workflows, problem matchers, and CI/CD
-configuration, see [.github/GITHUB-WORKFLOWS.md](.github/GITHUB-WORKFLOWS.md).
+configuration, see [.github/workflows/README.md](.github/workflows/README.md).
 
 ## Organization Profile
 

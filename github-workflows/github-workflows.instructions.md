@@ -1,7 +1,6 @@
 ---
 applyTo:
   - '.github/workflows/*.{yaml,yml}'
-  - '.github/workflow-templates/*.{yaml,yml}'
 description: When editing, reviewing, or creating any file matching .github/workflows/*.yml
 ---
 
