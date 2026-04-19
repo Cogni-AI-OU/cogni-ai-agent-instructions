@@ -8,6 +8,8 @@ For a human-readable overview, see [README.md](README.md).
 ## Workflow catalog
 
 - **[check.yml](check.yml)**: Linting and quality gates via actionlint and pre-commit.
+- **[cogni-ai-agent.yml](cogni-ai-agent.yml)**: Cogni AI Agent for autonomous repository tasks.
+- **[copilot-setup-steps.yml](copilot-setup-steps.yml)**: Utility for setting up Python and dependencies.
 - **[devcontainer-ci.yml](devcontainer-ci.yml)**: Build/test devcontainer and required tools/packages.
 
 ## Details
@@ -21,6 +23,18 @@ For a human-readable overview, see [README.md](README.md).
   since normal `pull_request` events don't trigger for bot actors.
 - Reusable: `uses: Cogni-AI-OU/.github/.github/workflows/check.yml@main`.
 - Jobs: `actionlint`, `link-checker`, `pre-commit`.
+
+### cogni-ai-agent.yml
+
+- Purpose: run the Cogni AI Agent to process natural language instructions and automate tasks.
+- Triggers: `issue_comment`, `pull_request_review_comment`, `workflow_dispatch`.
+- Inputs: `model` (choice of LLM), `prompt` (task description).
+- Permissions: `contents: write`, `id-token: write`, `issues: write`, `pull-requests: write`.
+
+### copilot-setup-steps.yml
+
+- Purpose: setup Python 3.12, cache, and install dependencies from `.devcontainer/requirements.txt`.
+- Triggers: `push`/`pull_request` on requirements or workflow; `workflow_dispatch`.
 
 ### devcontainer-ci.yml
 
