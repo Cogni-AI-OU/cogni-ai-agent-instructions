@@ -363,7 +363,8 @@ tries to auto-rebase (e.g., 113 commits), it encounters conflicts it cannot reso
 
 **For complete details**, see:
 `git/SKILL.md`
- - "Working with Automation Tools"
+
+- "Working with Automation Tools"
 
 ## References
 
