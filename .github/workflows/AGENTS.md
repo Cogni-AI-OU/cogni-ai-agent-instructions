@@ -73,7 +73,7 @@ For a human-readable overview, see [README.md](README.md).
 - Triggers: pull_request_target (trusted authors), /review comment (COLLABORATOR/OWNER/MEMBER), workflow_call,
   workflow_dispatch.
 - Guardrail: align review default behavior with OpenCode by using workflow-level
-  `env` fallbacks for `agent` and `model` rather than hardcoded literals in steps.
+  `env` fallbacks for `agent` and `model` rather than hardcoding agent/model literals in steps.
 - Permissions: `contents: read`, `id-token: write`, `issues: read`, `pull-requests: write`.
 - Reusable: `uses: Cogni-AI-OU/.github/.github/workflows/opencode-review.yml@main`.
 
@@ -104,6 +104,6 @@ The `model` input options for `workflow_dispatch` must be identical in all workf
 
 ## Notes
 
-- Follow [.github/instructions/github-workflows.instruction.md](../instructions/github-workflows.instruction.md)
+- Follow [github-workflows.instructions.md](../../github-workflows/github-workflows.instructions.md)
   when editing workflow files (ordering, formatting, validation).
 - Keep this catalog updated when workflows are added, removed, or renamed.

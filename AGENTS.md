@@ -73,7 +73,7 @@ Read and merge these when operating inside corresponding sub-directories (order 
   environment and upstream dependencies. If the root cause originates outside the repository scope,
   state the required upstream fix clearly and halt rather than introducing local entropy.
 - Read, assimilate, and strictly enforce the invariants defined in the main `AGENTS.md`,
-  along with any directory-specific `AGENTS.md` and related files, `.github/copilot-instructions.md`,
+  along with any directory-specific `AGENTS.md` and related files, `copilot/copilot.instructions.md`,
   and autonomously load any relevant `.instructions.md` rules or `SKILL.md` workflows before formulating a strategy.
 - Declare required inputs, missing context, edge cases, and optimal strategy before any tool invocation or code delta.
 - Snapshot current problem state in one entropy-minimized sentence.
@@ -196,7 +196,7 @@ the agent MUST integrate remote changes with a merge commit workflow.
 ## Required References
 
 - Project overview & install: [README.md](README.md)
-- Agent configuration & conventions: [.github/copilot-instructions.md](.github/copilot-instructions.md)
+- Agent configuration & conventions: [copilot/copilot.instructions.md](copilot/copilot.instructions.md)
 - Workflow navigation: [.tours/getting-started.tour](.tours/getting-started.tour)
 - Latest org baseline: <https://github.com/Cogni-AI-OU/.github/blob/main/AGENTS.md>
 
@@ -281,8 +281,6 @@ pre-commit run yamllint -a
 - Use `git mv`, `git rm`, or equivalent Git-aware tooling (instead of `mv` or `rm`) to preserve history
   when working with files under source control.
 
-## Feature-specific Notes
-
 ## Tooling
 
 - Use MCP when possible.
@@ -313,7 +311,7 @@ molecule syntax
 
 ### Updating Coding Standards
 
-- Language-specific instructions are in `.github/instructions/`
+- Language-specific instructions are in their respective directories
 - Update `.markdownlint.yaml`, `.yamllint`, or `.editorconfig` for linting rules
 - Run `pre-commit run -a` to verify changes pass all checks
 
@@ -328,8 +326,8 @@ on top of the updated target branch:
 4. Cherry-pick your feature commits
 5. Verify only your changes remain
 
-**For detailed step-by-step instructions with commands**, see:
-`SKILL.md` workflows for `git`.
+**For detailed step-by-step instructions with commands**, see the "Integrating Changes from Target Branch"
+section in the documentation.
 
 ### Key Points
 
@@ -361,7 +359,7 @@ tries to auto-rebase (e.g., 113 commits), it encounters conflicts it cannot reso
 
 **Error Patterns:** `Rebasing (1/XXX)` with large numbers, `CONFLICT (content)`, session crash with `GitError`
 
-**For complete details**, see: `git/SKILL.md` - "Working with Automation Tools"
+**For complete details**, see the "Working with Automation Tools" section in the documentation.
 
 ## References
 
@@ -393,3 +391,31 @@ If Copilot or automated checks behave unexpectedly:
 - Re-run `pre-commit run -a` locally to surface formatting or linting issues.
 - Verify `.markdownlint.yaml` and `.yamllint` have not been modified incorrectly.
 - If problems persist, open an issue with details of the command run and any error output.
+
+## Instructions Catalog for Agents
+
+Authoritative list of repository instruction files. Use these when editing matching files so changes
+stay compliant with linting and CI.
+
+For a human-readable overview, see [README.md](README.md).
+
+### Instruction files
+
+- [README.md](README.md): Overview of instruction purpose and validation tooling (Scope: All instructions)
+- [ansible.instructions.md](ansible/ansible.instructions.md): Conventions, idempotency, and linting for
+  Ansible content (Scope: Ansible roles and playbooks)
+- [github-workflows.instructions.md](github-workflows/github-workflows.instructions.md): Ordering, formatting,
+  validation for GitHub Actions workflows (Scope: .github/workflows)
+- [json.instructions.md](json/json.instructions.md): Formatting rules for JSON and JSONC (Scope: **/*.json)
+- [markdown.instructions.md](markdown/markdown.instructions.md): Markdown structure and linting expectations
+  (Scope: **/*.md)
+- [readme.instructions.md](readme/readme.instructions.md): Layout, badges, and content guidance for the main
+  README (Scope: Repository README.md)
+- [yaml.instructions.md](yaml/yaml.instructions.md): YAML formatting and linting rules (Scope: **/*.{yaml,yml})
+- [copilot.instructions.md](copilot/copilot.instructions.md): Coding standards and project context (Scope: Copilot)
+
+### Usage
+
+- Before editing a file, check this catalog and read the relevant instruction file.
+- Follow the `applyTo` patterns in each instruction file to know when it applies.
+- Keep this catalog updated when adding, renaming, or removing instruction files.

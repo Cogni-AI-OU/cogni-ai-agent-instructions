@@ -32,7 +32,7 @@ All blog posts must include YAML front matter at the beginning of the file with 
 
 ## Content Standards
 
-Blog posts must follow the general markdown content rules defined in `markdown.instructions.md`.
+Blog posts must follow the general markdown content rules defined in `../markdown/markdown.instructions.md`.
 
 ## Validation
 

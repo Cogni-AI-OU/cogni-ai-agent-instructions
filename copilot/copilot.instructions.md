@@ -44,19 +44,19 @@ Key contents:
 
 ### JSON
 
-Follow the JSON rules in `.github/instructions/json.instructions.md`, which mirror the repository `.editorconfig` configuration.
+Follow the JSON rules in `json/json.instructions.md`, which mirror the repository `.editorconfig` configuration.
 
 To test locally, use `jq` for validation or use the VS Code JSON formatter.
 
 ### Markdown
 
-Follow the Markdown rules in `.github/instructions/markdown.instructions.md`, which mirror the repository markdownlint configuration.
+Follow the Markdown rules in `markdown/markdown.instructions.md`, which mirror the repository markdownlint configuration.
 
 To test locally, run via `pre-commit run markdownlint -a` or use the VS Code Markdownlint extension.
 
 ### YAML
 
-Follow the YAML rules in `./.github/instructions/yaml.instructions.md`, which mirror the repository `.yamllint` configuration.
+Follow the YAML rules in `yaml/yaml.instructions.md`, which mirror the repository `.yamllint` configuration.
 
 Notes:
 
@@ -97,20 +97,19 @@ runtime and as the source of required controller-side dependencies.
 
 ```text
 .
-├── .github/
-│   ├── ISSUE_TEMPLATE/      # Issue templates (bug reports, feature requests)
-│   ├── agents/              # AI agent configurations
-│   ├── instructions/        # Language-specific coding standards
-│   ├── skills/              # Agent skills definitions
-│   ├── workflows/           # GitHub Actions workflows
-│   ├── copilot-instructions.md
-│   └── pull_request_template.md
-├── .tours/                   # VS Code guided tours
-├── profile/
-│   └── README.md             # Organization profile (shown on GitHub org page)
-├── AGENTS.md                 # AI agent guidance
-├── CODE_OF_CONDUCT.md        # Community standards
-└── README.md                 # Repository documentation
+|-- .github/
+|   |-- ISSUE_TEMPLATE/      # Issue templates (bug reports, feature requests)
+|   |-- agents/              # AI agent configurations
+|   |-- workflows/           # GitHub Actions workflows
+|   |-- pull_request_template.md
+|-- .tours/                   # VS Code guided tours
+|-- copilot/
+|   |-- copilot.instructions.md
+|-- profile/
+|   |-- README.md             # Organization profile (shown on GitHub org page)
+|-- AGENTS.md                 # AI agent guidance
+|-- CODE_OF_CONDUCT.md        # Community standards
+|-- README.md                 # Repository documentation
 ```
 
 ### Tours

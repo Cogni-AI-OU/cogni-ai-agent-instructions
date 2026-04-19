@@ -1,10 +1,10 @@
 # GitHub Actions Workflows
 
-This directory contains GitHub Actions workflows, agent prompts, and related configuration.
+This directory contains GitHub Actions workflows and related configuration.
 Reusable and repository workflows that automate checks, reviews, and AI-powered tasks.
 
 - For the agent-facing workflow catalog, see [AGENTS.md](AGENTS.md).
-- For editing guidelines, follow [.github/instructions/github-workflows.instruction.md](../instructions/github-workflows.instruction.md).
+- For editing guidelines, follow [github-workflows.instructions.md](../../github-workflows/github-workflows.instructions.md).
 
 ## Workflows
 
@@ -74,13 +74,6 @@ It can be invoked via slash commands (`/oc`, `/opencode`) on issue and PR commen
 
 The `opencode-review.yml` workflow provides OpenCode-driven PR review capabilities.
 
-## Agent Prompts
-
-The `../prompts/` directory contains ready-to-use prompts for AI agents to perform
-common repository management tasks. For agent-loading guidance and catalog, see
-[../prompts/AGENTS.md](../prompts/AGENTS.md). For human-oriented details, see
-[../prompts/README.md](../prompts/README.md).
-
 ## Problem Matchers
 
 GitHub Actions problem matchers automatically annotate files with errors and
@@ -108,25 +101,31 @@ annotations directly and don't need the problem matcher.
 Problem matchers are registered in the `.github/workflows/check.yml` workflow
 before running the corresponding tools.
 
+## Using these workflows
+
+- Reference a workflow from another repo with `uses: Cogni-AI-OU/.github/.github/workflows/<file>@main`.
+- Consult the catalog in [AGENTS.md](AGENTS.md) for inputs, triggers, and job details.
+- Keep branch protection and required checks enabled when consuming workflows that can push commits.
+
 ## Security
 
-### OpenCode Workflow Git Access
+### Cogni AI Agent Workflow Git Access
 
-The OpenCode workflow (`opencode.yml`) grants intentionally broad git access
-via `Bash(git:*)` to enable autonomous code changes. This permission is necessary
-for OpenCode to commit and push changes, but requires proper safeguards.
+The Cogni AI Agent workflow (`cogni-ai-agent.yml`) grants intentionally broad git access
+to enable autonomous code changes. This permission is necessary for the agent to commit and
+push changes, but requires proper safeguards.
 
 #### Security Controls
 
 **Access Control:**
 
-- Only trusted users can trigger OpenCode (OWNER, MEMBER, COLLABORATOR, CONTRIBUTOR)
+- Only trusted users can trigger the agent (OWNER, MEMBER, COLLABORATOR, CONTRIBUTOR)
 - PR/issue authors can only trigger on their own content
 - External contributors (FIRST_TIME_CONTRIBUTOR, NONE) are explicitly blocked
 
 **Required Repository Protections:**
 
-To safely use OpenCode with git access, repository administrators must configure:
+To safely use the Cogni AI Agent with git access, repository administrators must configure:
 
 1. **Branch Protection Rules** on main/protected branches:
    - Require pull request reviews before merging
@@ -136,7 +135,7 @@ To safely use OpenCode with git access, repository administrators must configure
 
 2. **GitHub Audit Logs** (organization-level):
    - Enable and regularly review audit logs
-   - Monitor commits made by `github-actions[bot]` (OpenCode's identity)
+   - Monitor commits made by `github-actions[bot]` (the agent's identity)
    - Set up alerts for suspicious patterns (rapid commits, deleted branches, etc.)
 
 3. **Protected Branch Policies**:
@@ -146,9 +145,9 @@ To safely use OpenCode with git access, repository administrators must configure
 
 #### Best Practices
 
-- Review OpenCode's commits before merging PRs
-- Use draft PRs for OpenCode's work to require explicit promotion
-- Regularly audit OpenCode's tool usage and permissions
+- Review the agent's commits before merging PRs
+- Use draft PRs for the agent's work to require explicit promotion
+- Regularly audit the agent's tool usage and permissions
 - Rotate `OPENCODE_API_KEY` periodically
 - Monitor workflow run logs for unexpected behavior
 
