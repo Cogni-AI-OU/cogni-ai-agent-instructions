@@ -8,7 +8,6 @@ Use this as the entry point for agent work, and follow linked catalogs where pre
 | Folder | Purpose | Agent catalog |
 | ------ | ------- | ------------- |
 | [.github/agents/](agents/) | Agent configuration files (e.g., specialized agent definitions) | — |
-| [.github/prompts/](prompts/) | Prompt files for AI agents (Markdown and YAML) | [.github/prompts/AGENTS.md](prompts/AGENTS.md) |
 | [.github/workflows/](workflows/) | Reusable GitHub Actions workflows | [.github/workflows/AGENTS.md](workflows/AGENTS.md) |
 
 ## Additional key files

@@ -65,6 +65,15 @@ The `devcontainer-ci.yml` workflow builds and tests the development container im
 to the `.devcontainer` directory, on a weekly schedule, and can also be used as a reusable workflow (requires
 `packages: write` permission for the caller).
 
+### OpenCode Workflow (`opencode.yml`)
+
+The `opencode.yml` workflow provides OpenCode automation for AI-assisted development.
+It can be invoked via slash commands (`/oc`, `/opencode`) on issue and PR comments or via manual workflow dispatch.
+
+### OpenCode Review Workflow (`opencode-review.yml`)
+
+The `opencode-review.yml` workflow provides OpenCode-driven PR review capabilities.
+
 ## Problem Matchers
 
 GitHub Actions problem matchers automatically annotate files with errors and
@@ -141,3 +150,41 @@ To safely use the Cogni AI Agent with git access, repository administrators must
 - Regularly audit the agent's tool usage and permissions
 - Rotate `OPENCODE_API_KEY` periodically
 - Monitor workflow run logs for unexpected behavior
+
+## OpenCode Tools
+
+### OpenCode (MCP) Tools
+
+When operating via OpenCode in the GitHub Actions runtime, the following MCP tools are available and
+should be utilized to perform tasks effectively:
+
+- **vscode**: `getProjectSetupInfo`, `installExtension`, `memory`, `newWorkspace`, `resolveMemoryFileUri`, `runCommand`,
+  `vscodeAPI`, `extensions`, `askQuestions`
+- **execute**: `runNotebookCell`, `testFailure`, `getTerminalOutput`, `killTerminal`, `sendToTerminal`,
+  `createAndRunTask`, `runInTerminal`
+- **read**: `getNotebookSummary`, `problems`, `readFile`, `viewImage`, `terminalSelection`, `terminalLastCommand`
+- **edit**: `createDirectory`, `createFile`, `createJupyterNotebook`, `editFiles`, `editNotebook`, `rename`
+- **search**: `changes`, `codebase`, `fileSearch`, `listDirectory`, `textSearch`, `usages`
+- **web**: `fetch`, `githubRepo`
+- **browser**: `openBrowserPage`
+- **agent**: `runSubagent`
+- **misc**: `vscode.mermaid-chat-features/renderMermaidDiagram`, `ms-python.python/getPythonEnvironmentInfo`,
+  `ms-python.python/getPythonExecutableCommand`, `ms-python.python/installPythonPackage`, `todo`
+
+### OpenCode Core Native Agent Tools
+
+In addition to the MCP integrations, the agent runtime provides a set of core built-in capabilities
+(often logged during builds as `Glob`, `Todo` or `TodoWrite`, `Edit`, etc.). These are executed directly by
+the agent's core engine, rather than through the OpenCode MCP protocol.
+
+Available native tools include:
+
+- **File System & Search**: `Glob` (fast file pattern matching), `Grep` (fast content search),
+  `Read` (read files/directories)
+- **File Mutation**: `Edit` (exact string replacements), `Write` (overwrite/create files)
+- **Execution**: `Bash` (persistent shell session for terminal operations like git, npm, etc.)
+- **Agentic Tracking**: `Todo` / `TodoWrite` (creates and manages structured task lists for complex sessions)
+- **Research & Sub-agents**: `Task` (launch specialized subagents), `Webfetch`, `Websearch`, `Codesearch`
+
+*Note: The native tools `Glob`, `Read`, `Grep`, `Edit`, and `Write` are explicitly prioritized over their shell
+equivalents (such as `find`, `cat`, `grep`, `sed`) to ensure precise context retention and safety.*

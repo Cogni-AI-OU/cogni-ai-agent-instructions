@@ -21,9 +21,6 @@
     },
     {
       "pattern": "^https://github.com/org/repo"
-    },
-    {
-      "pattern": "cogni-ai-skills/AGENTS.md"
     }
   ],
   "retryCount": 3,
