@@ -9,18 +9,13 @@ For general project invariants see [README.md](README.md).
 Read and merge these when operating inside corresponding sub-directories (order = precedence):
 
 - [`.github/AGENTS.md`](.github/AGENTS.md)
-- [`.github/skills/AGENTS.md`](.github/skills/AGENTS.md) to discover the available
-  skill catalog before interpreting the user request
 - [`.vscode/AGENTS.md`](.vscode/AGENTS.md) (command permissions and tasks)
 - Any `AGENTS.md` or `SKILL.md` in ancestor, then current directory tree
 
 ## Mandatory Skill Loading Protocol
 
 - Before any tool invocation, code delta, or execution plan, MUST read
-  [`.github/skills/AGENTS.md`](.github/skills/AGENTS.md) when present.
-- Treat [`.github/skills/AGENTS.md`](.github/skills/AGENTS.md) as the
-  authoritative catalog of available skills; follow its links to candidate
-  `SKILL.md` files.
+  any available `SKILL.md` workflows before formulating a strategy.
 - Deterministically route user intent to skills in this order: exact
   skill-name match, exact alias/tag match, normalized phrase match,
   description/activation keyword match.
@@ -279,7 +274,7 @@ pre-commit run yamllint -a
   performing complex regex parsing, or safely editing a few lines in-place within an automated script context.
   It is especially useful for large files where patching the whole file via MCP could take a lot of context
   processing for simple changes.
-- For detailed commands and examples, see `.github/skills/vim-ex/SKILL.md`.
+- For detailed commands and examples, see `SKILL.md` entries for `vim-ex`.
 
 ### Renaming/removing files
 
@@ -411,7 +406,7 @@ For a human-readable overview, see [README.md](README.md).
 | ----------- | ----- | ------- |
 | [README.md](README.md) | All instructions | Overview of instruction purpose and validation tooling |
 | [ansible.instructions.md](ansible/ansible.instructions.md) | Ansible roles and playbooks | Conventions, idempotency, and linting for Ansible content |
-| [github-workflows.instructions.md](github-workflows/github-workflows.instructions.md) | .github/workflows and workflow-templates | Ordering, formatting, validation for GitHub Actions workflows |
+| [github-workflows.instructions.md](github-workflows/github-workflows.instructions.md) | .github/workflows | Ordering, formatting, validation for GitHub Actions workflows |
 | [json.instructions.md](json/json.instructions.md) | **/*.json | Formatting rules for JSON and JSONC |
 | [markdown.instructions.md](markdown/markdown.instructions.md) | **/*.md | Markdown structure and linting expectations |
 | [readme.instructions.md](readme/readme.instructions.md) | Repository README.md | Layout, badges, and content guidance for the main README |
