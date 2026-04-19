@@ -326,8 +326,7 @@ on top of the updated target branch:
 4. Cherry-pick your feature commits
 5. Verify only your changes remain
 
-**For detailed step-by-step instructions with commands**, see:
-`.github/skills/git/SKILL.md`
+**For detailed step-by-step instructions with commands**, see the "Integrating Changes from Target Branch" section in the documentation.
 
 ### Key Points
 
@@ -359,8 +358,7 @@ tries to auto-rebase (e.g., 113 commits), it encounters conflicts it cannot reso
 
 **Error Patterns:** `Rebasing (1/XXX)` with large numbers, `CONFLICT (content)`, session crash with `GitError`
 
-**For complete details**, see:
-`.github/skills/git/SKILL.md` - "Working with Automation Tools"
+**For complete details**, see the "Working with Automation Tools" section in the documentation.
 
 ## References
 
@@ -402,19 +400,17 @@ For a human-readable overview, see [README.md](README.md).
 
 ### Instruction files
 
-| Instruction | Scope | Purpose |
-| ----------- | ----- | ------- |
-| [README.md](README.md) | All instructions | Overview of instruction purpose and validation tooling |
-| [ansible.instructions.md](ansible/ansible.instructions.md) | Ansible roles and playbooks | Conventions, idempotency, and linting for Ansible content |
-| [github-workflows.instructions.md](github-workflows/github-workflows.instructions.md) | .github/workflows | Ordering, formatting, validation for GitHub Actions workflows |
-| [json.instructions.md](json/json.instructions.md) | **/*.json | Formatting rules for JSON and JSONC |
-| [markdown.instructions.md](markdown/markdown.instructions.md) | **/*.md | Markdown structure and linting expectations |
-| [readme.instructions.md](readme/readme.instructions.md) | Repository README.md | Layout, badges, and content guidance for the main README |
-| [yaml.instructions.md](yaml/yaml.instructions.md) | **/*.{yaml,yml} | YAML formatting and linting rules |
-| [copilot.instructions.md](copilot/copilot.instructions.md) | Copilot | Coding standards and project context |
+- [README.md](README.md): Overview of instruction purpose and validation tooling (Scope: All instructions)
+- [ansible.instructions.md](ansible/ansible.instructions.md): Conventions, idempotency, and linting for Ansible content (Scope: Ansible roles and playbooks)
+- [github-workflows.instructions.md](github-workflows/github-workflows.instructions.md): Ordering, formatting, validation for GitHub Actions workflows (Scope: .github/workflows)
+- [json.instructions.md](json/json.instructions.md): Formatting rules for JSON and JSONC (Scope: **/*.json)
+- [markdown.instructions.md](markdown/markdown.instructions.md): Markdown structure and linting expectations (Scope: **/*.md)
+- [readme.instructions.md](readme/readme.instructions.md): Layout, badges, and content guidance for the main README (Scope: Repository README.md)
+- [yaml.instructions.md](yaml/yaml.instructions.md): YAML formatting and linting rules (Scope: **/*.{yaml,yml})
+- [copilot.instructions.md](copilot/copilot.instructions.md): Coding standards and project context (Scope: Copilot)
 
 ### Usage
 
-- Before editing a file, check this table and read the relevant instruction file.
+- Before editing a file, check this catalog and read the relevant instruction file.
 - Follow the `applyTo` patterns in each instruction file to know when it applies.
 - Keep this catalog updated when adding, renaming, or removing instruction files.
