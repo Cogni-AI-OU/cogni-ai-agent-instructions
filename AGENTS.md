@@ -361,10 +361,7 @@ tries to auto-rebase (e.g., 113 commits), it encounters conflicts it cannot reso
 
 **Error Patterns:** `Rebasing (1/XXX)` with large numbers, `CONFLICT (content)`, session crash with `GitError`
 
-**For complete details**, see:
-`git/SKILL.md`
-
-- "Working with Automation Tools"
+**For complete details**, see: `git/SKILL.md` - "Working with Automation Tools"
 
 ## References
 

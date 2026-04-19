@@ -84,7 +84,7 @@ The following configuration values **MUST** be kept in sync across multiple file
 ### OPENCODE_PERMISSION
 
 The OpenCode bash command allow/deny list must stay synchronized across
-workflow, local OpenCode, and VS Code auto-approve configs.
+workflow and VS Code auto-approve configs.
 
 | File | Location |
 | ---- | -------- |
