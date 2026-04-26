@@ -16,7 +16,7 @@ Cogni-AI-OU projects:
 ### Key Features
 
 - **GitHub Actions Workflows**: CI/CD and automation (OpenCode, pre-commit, etc.)
-- **AI Agent Configurations**: AGENTS.md, skills, and prompts for automated development
+- **AI Agent Configurations**: AGENTS.md, AGENTS-RUNTIME.md, skills, and prompts
 - **Coding Instructions**: Language-specific standards in respective directories
 - **Pre-commit Hooks**: Linting and validation tooling
 - **Code Tours**: Guided walkthroughs for repository onboarding
@@ -45,7 +45,8 @@ Cogni-AI-OU projects:
 3. Review the core guidance:
    - This README for repository scope and the local workflow
    - [.tours/getting-started.tour](.tours/getting-started.tour) for a guided walkthrough
-   - [AGENTS.md](AGENTS.md) for repository-specific agent guidance
+    - [AGENTS.md](AGENTS.md) and [AGENTS-RUNTIME.md](AGENTS-RUNTIME.md) for repository-specific agent guidance
+
 
 ## Development
 
@@ -77,7 +78,8 @@ pre-commit run flake8 -a
 
 - `.github/`: default templates, workflows, instructions, prompts, skills, and agent configuration
 - `.tours/`: guided walkthroughs for repository onboarding
-- `AGENTS.md`: repository-specific guidance for automation agents
+- `AGENTS.md`: full guidance for development agents
+- `AGENTS-RUNTIME.md`: slimmed-down guidance for agents in GitHub Actions runtime
 - `README.md`: repository overview and local development workflow
 
 ## AI Agents
@@ -88,7 +90,8 @@ This repository provides AI agent configurations for automated development.
 
 | File/Directory | Audience | Purpose |
 | -------------- | -------- | ------- |
-| [AGENTS.md](AGENTS.md) | All agents | Repository-specific guidance and workflows |
+| [AGENTS.md](AGENTS.md) | Development agents | Full repository-specific guidance and protocols |
+| [AGENTS-RUNTIME.md](AGENTS-RUNTIME.md) | Runtime agents | Slimmed-down instruction loading for GitHub Actions |
 | [copilot/copilot.instructions.md](copilot/copilot.instructions.md) | Copilot | Coding standards and project context |
 | [Instructions Catalog](AGENTS.md#instructions-catalog-for-agents) | All | Available coding instructions |
 
