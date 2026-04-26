@@ -99,7 +99,6 @@ runtime and as the source of required controller-side dependencies.
 .
 |-- .github/
 |   |-- ISSUE_TEMPLATE/      # Issue templates (bug reports, feature requests)
-|   |-- agents/              # AI agent configurations
 |   |-- workflows/           # GitHub Actions workflows
 |   |-- pull_request_template.md
 |-- .tours/                   # VS Code guided tours
