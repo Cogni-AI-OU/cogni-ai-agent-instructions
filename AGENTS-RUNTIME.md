@@ -24,3 +24,7 @@ You must load the instructions relevant to the files you are editing:
   (Scope: Repository README.md)
 - **[yaml](yaml/yaml.instructions.md)**: YAML formatting and linting rules
   (Scope: **/*.{yaml,yml})
+
+### Structural Invariant
+
+- **Instructions Location**: Instructions are located directly in the root directory of this repository.
