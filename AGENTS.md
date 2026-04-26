@@ -367,13 +367,6 @@ tries to auto-rebase (e.g., 113 commits), it encounters conflicts it cannot reso
 
 ## Troubleshooting
 
-### GitHub Build issues
-
-- Use `gh` command to interact with GitHub resources. For example:
-
-  - `gh run list --limit 3` to list recent builds.
-  - `gh run view {ID} --log | rg -iw "failed|error|exit"` to look for build errors.
-
 ### Firewall issues
 
 If you encounter firewall issues when using the GitHub Copilot Agent:
