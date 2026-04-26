@@ -57,26 +57,19 @@ applyTo: '**/*.{md,mmd}'
 - **Mindmap Implicit Nodes**: NEVER use implicit text nodes (e.g., just
   `"Label"`) in mindmaps. ALWAYS explicitly map every node to an ID (e.g.,
   `node_id["Label"]`), especially for child nodes.
-- **Nested Quotes in Pipes**: NEVER use raw double quotes (`"`) inside
-  pipe-delimited edge labels (e.g., `-->|"Label"|`). This crashes many standard
-  renderers. Use the HTML entity `&quot;` instead: `-->|&quot;Label&quot;|`.
-- **Non-ASCII Characters**: Avoid typographic characters like `→` (right arrow)
-  or `–` (en dash) in labels; use standard ASCII `->` or `-` to prevent
-  `require-ascii` pre-commit failures.
+- **Non-ASCII Characters**: Avoid typographic characters like `→` or `–` in
+  labels. Using standard ASCII (`->`, `-`) ensures compatibility with
+  ASCII-only linters (e.g., `require-ascii`) and improves cross-platform
+  rendering consistency.
 - **Over-complexity**: Avoid massive diagrams (> 50 nodes) that become
   unreadable.
-- **Quotes in Pipe Labels**: Never use double quotes `"` inside pipe-delimited
-  labels (e.g., `-->|"text"|`). Use `&quot;` or switch to un-piped quoted
-  labels `--> "text"`.
-- **Special Characters in Labels**: Avoid unquoted labels containing
-  parentheses `()`, brackets `[]`, or operators `< >` if they are not the
-  primary node shape. Quote them or use HTML entities.
-- **Special Chars in Pipe Labels**: Avoid structural characters (especially
-  parentheses `()`) inside pipe-delimited labels `|...|`. Use quoted strings
-  `--> "Label (text)"` instead.
-- **Unquoted Parentheses & Strings**: **NEVER** use unquoted parentheses `()`
-  or strings with spaces/commas/special chars without quotes in node labels,
-  edge labels (`-->|...|`), or subgraph titles. Doing so triggers errors or
-  parser skips. Always wrap them in exactly one pair of double quotes (e.g.,
-  `subgraph ID ["Title (Details)"]`). Avoid parentheses entirely in edge
-  labels (prefer `-->|Condition, details|` over `-->|Condition (details)|`).
+- **Pipe-Delimited Label Restrictions**: **NEVER** use raw double quotes (`"`)
+  or structural characters (especially parentheses `()`) inside pipe-delimited
+  labels (e.g., `-->|...|`). Raw quotes crash many renderers; use `&quot;` or
+  switch to un-piped quoted labels (e.g., `--> "Label (text)"`) to ensure
+  stability.
+- **Unquoted Strings & Special Chars**: **NEVER** use unquoted strings
+  containing spaces, commas, parentheses `()`, brackets `[]`, or operators
+  `< >` in node labels or subgraph titles. Doing so triggers errors or parser
+  skips. Always wrap them in exactly one pair of double quotes (e.g.,
+  `node_id["Label (Details)"]`).
