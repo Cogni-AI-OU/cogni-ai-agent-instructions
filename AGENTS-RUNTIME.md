@@ -2,22 +2,6 @@
 
 Persistent single-source truth for autonomous agent behavior.
 
-For general project invariants see [README.md](README.md).
-
-## Directory-Specific Agent files
-
-Read and merge these when operating inside corresponding sub-directories (order = precedence):
-
-- [`.github/AGENTS.md`](.github/AGENTS.md)
-- Any `AGENTS.md` or `SKILL.md` in ancestor, then current directory tree
-
-## Required References
-
-- Agent configuration & conventions: [copilot/copilot.instructions.md](copilot/copilot.instructions.md)
-- Latest org baseline: <https://github.com/Cogni-AI-OU/.github/blob/main/AGENTS.md>
-- Project overview & install: [README.md](README.md)
-- Workflow navigation: [.tours/getting-started.tour](.tours/getting-started.tour)
-
 ## Instructions
 
 You must load the instructions relevant to the files you are editing:
