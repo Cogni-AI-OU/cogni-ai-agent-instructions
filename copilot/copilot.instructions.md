@@ -100,6 +100,7 @@ runtime and as the source of required controller-side dependencies.
 |-- .github/
 |   |-- ISSUE_TEMPLATE/      # Issue templates (bug reports, feature requests)
 |   |-- workflows/           # GitHub Actions workflows
+|   |-- FIREWALL.md          # Firewall allowlist for agents
 |   |-- pull_request_template.md
 |-- .tours/                   # VS Code guided tours
 |-- copilot/
