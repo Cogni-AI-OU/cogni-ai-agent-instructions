@@ -394,16 +394,26 @@ For a human-readable overview, see [README.md](README.md).
 
 ### Instruction files
 
-- [README.md](README.md): Overview of instruction purpose and validation tooling (Scope: All instructions)
-- [ansible.instructions.md](ansible/ansible.instructions.md): Conventions, idempotency, and linting for Ansible content (Scope: Ansible roles and playbooks)
-- [blog.instructions.md](blog/blog.instructions.md): Blog post specific content standards and validation (Scope: docs/blog/**/*.md, blog/**/*.md, posts/**/*.md)
-- [copilot.instructions.md](copilot/copilot.instructions.md): Coding standards and project context (Scope: Copilot)
-- [github-workflows.instructions.md](github-workflows/github-workflows.instructions.md): Ordering, formatting, validation for GitHub Actions workflows (Scope: .github/workflows)
-- [json.instructions.md](json/json.instructions.md): Formatting rules for JSON and JSONC (Scope: **/*.json)
-- [markdown.instructions.md](markdown/markdown.instructions.md): Markdown structure and linting expectations (Scope: **/*.md)
-- [mermaid.instructions.md](mermaid/mermaid.instructions.md): Mermaid formatting standards, best practices, and anti-patterns (Scope: **/*.{md,mmd})
-- [readme.instructions.md](readme/readme.instructions.md): Layout, badges, and content guidance for the main README (Scope: Repository README.md)
-- [yaml.instructions.md](yaml/yaml.instructions.md): YAML formatting and linting rules (Scope: **/*.{yaml,yml})
+- [README.md](README.md): Overview of instruction purpose and validation tooling
+  (Scope: All instructions)
+- [ansible.instructions.md](ansible/ansible.instructions.md): Conventions, idempotency, and linting for Ansible content
+  (Scope: Ansible roles and playbooks)
+- [blog.instructions.md](blog/blog.instructions.md): Blog post specific content standards and validation
+  (Scope: docs/blog/**/*.md, blog/**/*.md, posts/**/*.md)
+- [copilot.instructions.md](copilot/copilot.instructions.md): Coding standards and project context
+  (Scope: Copilot)
+- [github-workflows.instructions.md](github-workflows/github-workflows.instructions.md): Ordering, formatting, validation for GitHub Actions workflows
+  (Scope: .github/workflows)
+- [json.instructions.md](json/json.instructions.md): Formatting rules for JSON and JSONC
+  (Scope: **/*.json)
+- [markdown.instructions.md](markdown/markdown.instructions.md): Markdown structure and linting expectations
+  (Scope: **/*.md)
+- [mermaid.instructions.md](mermaid/mermaid.instructions.md): Mermaid formatting standards, best practices, and anti-patterns
+  (Scope: **/*.{md,mmd})
+- [readme.instructions.md](readme/readme.instructions.md): Layout, badges, and content guidance for the main README
+  (Scope: Repository README.md)
+- [yaml.instructions.md](yaml/yaml.instructions.md): YAML formatting and linting rules
+  (Scope: **/*.{yaml,yml})
 
 ### Usage
 
