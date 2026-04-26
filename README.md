@@ -90,13 +90,26 @@ This repository provides AI agent configurations for automated development.
 | -------------- | -------- | ------- |
 | [AGENTS.md](AGENTS.md) | All agents | Repository-specific guidance and workflows |
 | [copilot/copilot.instructions.md](copilot/copilot.instructions.md) | Copilot | Coding standards and project context |
-| [.github/agents/](.github/agents/) | Orchestrators | Specialized agent configs for specific tasks |
 | [Instructions Catalog](AGENTS.md#instructions-catalog-for-agents) | All | Available coding instructions |
 
 See also:
 
 - [`AGENTS.md` file format specification](https://agents.md/)
 - [Best practices for using GitHub Copilot](https://gh.io/copilot-coding-agent-tips).
+
+### Installation
+
+To set up the required agents, instructions, and skills in your repository:
+
+```bash
+# Clone agents, instructions, and skills.
+git clone --depth=1 https://github.com/Cogni-AI-OU/cogni-ai-agents .github/agents
+git clone --depth=1 https://github.com/Cogni-AI-OU/cogni-ai-agent-instructions .github/instructions
+git clone --depth=1 https://github.com/Cogni-AI-OU/cogni-ai-agent-skills .github/skills
+
+# Symlink individual agents from their subdirectories to the discovery directory.
+for d in .github/agents/*/ ; do ln -fsv "$(basename "$d")/$(basename "$d").agent.md" .github/agents/ ; done
+```
 
 ## GitHub Actions
 

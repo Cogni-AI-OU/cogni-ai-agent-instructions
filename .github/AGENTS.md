@@ -7,12 +7,12 @@ Use this as the entry point for agent work, and follow linked catalogs where pre
 
 | Folder | Purpose | Agent catalog |
 | ------ | ------- | ------------- |
-| [.github/agents/](agents/) | Agent configuration files (e.g., specialized agent definitions) | — |
 | [.github/workflows/](workflows/) | Reusable GitHub Actions workflows | [.github/workflows/AGENTS.md](workflows/AGENTS.md) |
 
 ## Additional key files
 
 - [.github/actionlint-matcher.json](actionlint-matcher.json): problem matchers used in workflows.
 - [.github/pre-commit-matcher.json](pre-commit-matcher.json): problem matchers used in workflows.
+- [.github/FIREWALL.md](FIREWALL.md): firewall allowlist configuration for agents.
 
 Keep this catalog updated when adding, removing, or renaming folders or agent catalogs.
