@@ -241,45 +241,12 @@ the agent MUST integrate remote changes with a merge commit workflow.
 
 ## Common Tasks
 
-### Before each commit
-
-- Verify your expected changes with `git diff --no-color`.
-- Ensure no temporary, dummy, or unrelated test files are included in the commit.
-- Use the project linting/validation tools to confirm your changes meet the coding standard.
-- If the repo uses git hooks, run them to validate your changes.
-
-### Linting and Validation
-
-```bash
-# Run all pre-commit checks
-pre-commit run -a
-
-# Run specific checks
-pre-commit run markdownlint -a
-pre-commit run yamllint -a
-```
-
 ### File operations
 
 ### Editing files
 
 - When modifying or creating documentation and plain text files, always enforce line-wrapping and length
   limits in accordance with project-defined standards (such as `.markdownlint.yaml` or `.editorconfig`).
-
-### Editing files with ex
-
-- While files should normally be edited directly via MCP tools, `ex` (Vim in Ex mode) provides powerful
-  non-interactive text manipulation directly from the terminal shell.
-- Use `ex` when it is more beneficial to manipulate text programmatically, such as rapidly wrapping long lines,
-  performing complex regex parsing, or safely editing a few lines in-place within an automated script context.
-  It is especially useful for large files where patching the whole file via MCP could take a lot of context
-  processing for simple changes.
-- For detailed commands and examples, see `SKILL.md` entries for `vim-ex`.
-
-### Renaming/removing files
-
-- Use `git mv`, `git rm`, or equivalent Git-aware tooling (instead of `mv` or `rm`) to preserve history
-  when working with files under source control.
 
 ## Tooling
 
@@ -293,73 +260,12 @@ pre-commit run yamllint -a
 - If triggered by a brief comment, check whether the parent comment exists and includes more detail.
 - If it's still ambiguous, communicate with the user and propose options.
 
-### Testing
-
-```bash
-# Run Molecule tests
-molecule test
-
-# Syntax check
-molecule syntax
-```
 
 ### Adding or Modifying Workflows
 
 - Workflows in `.github/workflows/` can be reused via `workflow_call`
 - Test workflow changes on a feature branch before merging to main
 - Use `actionlint` to validate workflow syntax locally
-
-### Updating Coding Standards
-
-- Language-specific instructions are in their respective directories
-- Update `.markdownlint.yaml`, `.yamllint`, or `.editorconfig` for linting rules
-- Run `pre-commit run -a` to verify changes pass all checks
-
-## Integrating Changes from Target Branch
-
-Recommended way is to use the **cherry-pick workflow** to rebase your commits
-on top of the updated target branch:
-
-1. Identify your feature commits
-2. Fetch the latest target branch
-3. Reset your branch to target (with backup)
-4. Cherry-pick your feature commits
-5. Verify only your changes remain
-
-**For detailed step-by-step instructions with commands**, see the "Integrating Changes from Target Branch"
-section in the documentation.
-
-### Key Points
-
-- **Never** use `git merge <target-branch>` for branch integration
-- **Always** create backup tags before destructive operations
-- **Always** verify with `git diff` that only your changes remain
-- **Use** `GIT_EDITOR=true` for non-interactive cherry-pick operations
-
-### Using `report_progress` Tool
-
-**WARNING**: The `report_progress` tool automatically rebases your branch against the remote
-tracking branch. This **WILL CRASH** the session if your local history has diverged from remote.
-
-**When Crash Occurs:**
-
-After using `git reset --hard` to rewrite history, your local branch diverges from remote. When `report_progress`
-tries to auto-rebase (e.g., 113 commits), it encounters conflicts it cannot resolve, crashing the session.
-
-**Prevention (Choose One):**
-
-1. **Use new branch name** after rewriting history: `git checkout -b <feature>-v2` (safest)
-2. **Complete git operations manually**, then ask user for manual push (never call `report_progress` after `git reset --hard`)
-
-**If Already Crashed:**
-
-1. Run `git rebase --abort`
-2. Create new branch: `git checkout -b <feature>-v2`
-3. Push new branch: `git push origin <feature>-v2`
-
-**Error Patterns:** `Rebasing (1/XXX)` with large numbers, `CONFLICT (content)`, session crash with `GitError`
-
-**For complete details**, see the "Working with Automation Tools" section in the documentation.
 
 ## References
 
