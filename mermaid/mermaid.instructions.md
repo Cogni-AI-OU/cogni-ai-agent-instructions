@@ -76,7 +76,7 @@ applyTo: '**/*.{md,mmd}'
   `--> "Label (text)"` instead.
 - **Unquoted Parentheses & Strings**: **NEVER** use unquoted parentheses `()`
   or strings with spaces/commas/special chars without quotes in node labels,
-  edge labels (`-->|...|`), or subgraph titles. Doing so triggers error or
+  edge labels (`-->|...|`), or subgraph titles. Doing so triggers errors or
   parser skips. Always wrap them in exactly one pair of double quotes (e.g.,
   `subgraph ID ["Title (Details)"]`). Avoid parentheses entirely in edge
   labels (prefer `-->|Condition, details|` over `-->|Condition (details)|`).
