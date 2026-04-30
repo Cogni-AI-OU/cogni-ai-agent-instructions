@@ -73,7 +73,8 @@ applyTo: '**/*.{md,mmd}'
   reserved as the structural delimiter between periods and events. Use alternatives 
   like `02-40` or `02h40`.
 - **Unquoted Strings & Special Chars**: **NEVER** use unquoted strings
-  containing spaces, commas, parentheses `()`, brackets `[]`, or operators
-  `< >` in node labels or subgraph titles. Doing so triggers errors or parser
-  skips. Always wrap them in exactly one pair of double quotes (e.g.,
-  `node_id["Label (Details)"]`).
+  containing spaces, commas, parentheses `()`, brackets `[]`, curly braces `{}`,
+  or operators `< >` in node labels, Kanban cards, or subgraph titles. Doing so
+  triggers errors or parser skips. For Kanban cards (`[Label]`) or properties (`bodyText:`),
+  completely strip or replace these characters. For other diagrams, always wrap them
+  in exactly one pair of double quotes (e.g., `node_id["Label (Details)"]`).
