@@ -26,12 +26,6 @@
       "line": 20
     },
     {
-      "title": "GitHub Copilot Instructions",
-      "description": "## Copilot Configuration\n\nThis file provides context-aware instructions to GitHub Copilot when working in this repository.\n\n### Key Guidelines:\n\n- **Python Standards**: Use Python 3.11+, PEP 8, and `uv` for dependency management\n- **Formatting**: Follow markdownlint and yamllint rules\n- **Project Structure**: Uses Codespaces and pre-commit hooks\n\nThese instructions help Copilot provide more accurate and consistent code suggestions.",
-      "file": "copilot/copilot.instructions.md",
-      "line": 1
-    },
-    {
       "title": "Instructions Directory",
       "description": "## Repository-Wide Coding Standards\n\nThere are detailed guidelines for different file types located in their respective directories:\n\n- **markdown/markdown.instructions.md**: Markdown formatting rules\n- **yaml/yaml.instructions.md**: YAML formatting standards\n- **ansible/ansible.instructions.md**: Ansible best practices\n- **blog/blog.instructions.md**: Blog post requirements\n- **readme/readme.instructions.md**: README.md specific guidelines\n\nThese files use the `applyTo` frontmatter to scope rules to specific file patterns and are integrated with GitHub Copilot.",
       "file": "markdown/markdown.instructions.md"
