@@ -92,7 +92,6 @@ This repository provides AI agent configurations for automated development.
 | -------------- | -------- | ------- |
 | [AGENTS.md](AGENTS.md) | Development agents | Full repository-specific guidance and protocols |
 | [AGENTS-RUNTIME.md](AGENTS-RUNTIME.md) | Runtime agents | Slimmed-down instruction loading for GitHub Actions |
-| [copilot/copilot.instructions.md](copilot/copilot.instructions.md) | Copilot | Coding standards and project context |
 | [Instructions Catalog](AGENTS.md#instructions-catalog-for-agents) | All | Available coding instructions |
 
 See also:

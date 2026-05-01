@@ -84,7 +84,6 @@ the agent MUST integrate remote changes with a merge commit workflow.
 ## Required References
 
 - Project overview & install: [README.md](README.md)
-- Agent configuration & conventions: [copilot/copilot.instructions.md](copilot/copilot.instructions.md)
 - Workflow navigation: [.tours/getting-started.tour](.tours/getting-started.tour)
 - Latest org baseline: <https://github.com/Cogni-AI-OU/.github/blob/main/AGENTS.md>
 
@@ -194,8 +193,6 @@ For a human-readable overview, see [README.md](README.md).
   (Scope: Ansible roles and playbooks)
 - [blog.instructions.md](blog/blog.instructions.md): Blog post specific content standards and validation
   (Scope: docs/blog/**/*.md, blog/**/*.md, posts/**/*.md)
-- [copilot.instructions.md](copilot/copilot.instructions.md): Coding standards and project context
-  (Scope: Copilot)
 - [github-workflows.instructions.md](github-workflows/github-workflows.instructions.md): Ordering, formatting, validation for GitHub Actions workflows
   (Scope: .github/workflows)
 - [json.instructions.md](json/json.instructions.md): Formatting rules for JSON and JSONC
