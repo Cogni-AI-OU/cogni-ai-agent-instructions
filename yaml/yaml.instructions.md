@@ -15,6 +15,7 @@ applyTo: '**/*.{yaml,yml}'
 - Keep list/map items in lexicographical order when practical.
 - When embedding code blocks or inline YAML snippets inside lists, include a trailing newline to preserve indentation.
 - Allow at most one space inside braces (yamllint `braces`).
+- Be aware of potentially different formats embedded/stored in YAML strings (e.g. JSON strings). When modifying these values, ensure you do not break the embedded format's syntax (for example, avoid changing `"key": "value"` to `"key": >-` inside a JSON string, which would make it invalid JSON).
 
 ## Validation
 
