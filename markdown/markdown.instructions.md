@@ -16,7 +16,8 @@ The following markdown content rules are enforced in the validators:
 2. **Lists**: Use bullet points or numbered lists for lists. Ensure proper indentation and spacing.
 3. **Code Blocks**: Use fenced code blocks for code snippets. Always specify the language for syntax
    highlighting (required for linting compliance).
-4. **Links**: Use proper Markdown syntax for links. Ensure that links are valid and accessible.
+4. **Links**: Use proper Markdown syntax for links. Ensure that links are valid and accessible. If links are outdated
+   or no longer exist (e.g., when files become redundant), they should be removed.
 5. **Images**: Use proper Markdown syntax for images. Include alt text for accessibility.
 6. **Tables**: Use Markdown tables for tabular data. Ensure proper formatting and alignment.
 7. **Line Length**: Limit line length to 120 characters to align with project linting.
