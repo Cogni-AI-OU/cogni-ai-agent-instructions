@@ -28,6 +28,9 @@ The following markdown content rules are enforced in the validators:
 Follow these guidelines for formatting and structuring your markdown content:
 
 - **Lists**: Use `-` for bullet points and `1.` for numbered lists. Indent nested lists with two spaces.
+- **Emphasis**: For strong emphasis, use format like:
+  - **Bold statement**:
+    Follow-up statement in the next line. Keep unordered lists in order.
 - **Code Blocks**: Use triple backticks (```) to create fenced code blocks. Always specify the
   language after the opening backticks for syntax highlighting (e.g., `csharp`). This is required
   for linting compliance.
