@@ -21,7 +21,7 @@ The following markdown content rules are enforced in the validators:
 5. **Images**: Use proper Markdown syntax for images. Include alt text for accessibility.
 6. **Tables**: Use Markdown tables for tabular data. Ensure proper formatting and alignment.
 7. **Line Length**: Limit line length to 120 characters to align with project linting.
-8. **Whitespace**: Use appropriate whitespace to separate sections and improve readability.
+9. **Whitespace**: Use appropriate whitespace to separate sections and improve readability.
 
 ## Formatting and Structure
 
@@ -36,8 +36,11 @@ Follow these guidelines for formatting and structuring your markdown content:
     after `<!-- Named links -->`.
 - **Images**: Use `![alt text](image URL)` for images. Include a brief description of the image in the alt text.
 - **Tables**: Use `|` to create tables. Ensure that columns are properly aligned and headers are included.
-- **Line Length**: Break lines at 120 characters to match `.markdownlint.yaml`. Use soft line breaks for long paragraphs.
-- **Whitespace**: Use blank lines to separate sections and improve readability. Avoid excessive whitespace.
+- **Line Length**:
+  Break lines at 120 characters to match formatters (e.g. `.markdownlint.yaml`).
+  Use soft line breaks for long paragraphs. Prefered way to split long sentences is at their full stop or complete phrase.
+- **Whitespace**:
+  Use blank lines to separate sections and improve readability. Avoid excessive whitespace.
 
 ## Validation Requirements
 
