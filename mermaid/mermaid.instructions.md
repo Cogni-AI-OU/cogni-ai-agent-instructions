@@ -68,9 +68,9 @@ applyTo: '**/*.{md,mmd}'
   labels (e.g., `-->|...|`). Raw quotes crash many renderers; use `&quot;` or
   switch to un-piped quoted labels (e.g., `--> "Label (text)"`) to ensure
   stability.
-- **Timeline Colon Delimiters**: **NEVER** use a colon (`:`) inside a time period 
-  (e.g., `02:40`) or event description in a `timeline` diagram. The colon is strictly 
-  reserved as the structural delimiter between periods and events. Use alternatives 
+- **Timeline Colon Delimiters**: **NEVER** use a colon (`:`) inside a time period
+  (e.g., `02:40`) or event description in a `timeline` diagram. The colon is strictly
+  reserved as the structural delimiter between periods and events. Use alternatives
   like `02-40` or `02h40`.
 - **Unquoted Strings & Special Chars**: **NEVER** use unquoted strings
   containing spaces, commas, parentheses `()`, brackets `[]`, curly braces `{}`,

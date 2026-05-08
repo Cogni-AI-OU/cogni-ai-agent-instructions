@@ -22,6 +22,7 @@ The following markdown content rules are enforced in the validators:
 6. **Tables**: Use Markdown tables for tabular data. Ensure proper formatting and alignment.
 7. **Line Length**: Limit line length to 120 characters to align with project linting.
 8. **Whitespace**: Use appropriate whitespace to separate sections and improve readability.
+9. **Content Freshness**: Remove overlapping documentation and keep outdated information up-to-date.
 
 ## Formatting and Structure
 
