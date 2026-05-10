@@ -17,7 +17,6 @@ on:
         required: false
         type: string
       model:
-        default: ${{ vars.OPENCODE_MODEL_DEFAULT || 'opencode/gemini-3-flash' }}
         description: Model to use
         required: false
         type: string
@@ -100,11 +99,11 @@ on:
           - opencode/qwen3.6-plus
           - opencode/qwen3.5-plus
           # Grok models (xAI)
-          - xai/grok-4-1-fast-non-reasoning # Fast responses, 2M context
-          - xai/grok-4-1-fast-reasoning # Tool-calling + reasoning, 2M context
-          - xai/grok-4.20-0309-non-reasoning # Flagship, 2M context
-          - xai/grok-4.20-0309-reasoning # Flagship + reasoning, 2M context
-          - xai/grok-code-fast-1 # Agentic coding + reasoning, 256K context
+          - xai/grok-4-1-fast-non-reasoning  # Fast responses, 2M context
+          - xai/grok-4-1-fast-reasoning  # Tool-calling + reasoning, 2M context
+          - xai/grok-4.20-0309-non-reasoning  # Flagship, 2M context
+          - xai/grok-4.20-0309-reasoning  # Flagship + reasoning, 2M context
+          - xai/grok-code-fast-1  # Agentic coding + reasoning, 256K context
         required: true
         type: choice
       prompt:
@@ -146,7 +145,7 @@ jobs:
         uses: Cogni-AI-OU/cogni-ai-agent-action@main
         with:
           agent: ${{ inputs.agent || env.OPENCODE_AGENT_DEFAULT }}
-          model: ${{ inputs.model || env.OPENCODE_MODEL_DEFAULT }}
+          model: ${{ inputs.model || vars.OPENCODE_MODEL_DEFAULT || env.OPENCODE_MODEL_DEFAULT }}
           opencode-api-key: ${{ secrets.OPENCODE_API_KEY }}  # <https://opencode.ai/auth>
           permissions: |-
             bash:
