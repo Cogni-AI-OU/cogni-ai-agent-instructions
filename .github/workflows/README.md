@@ -65,15 +65,6 @@ The `devcontainer-ci.yml` workflow builds and tests the development container im
 to the `.devcontainer` directory, on a weekly schedule, and can also be used as a reusable workflow (requires
 `packages: write` permission for the caller).
 
-### OpenCode Workflow (`opencode.yml`)
-
-The `opencode.yml` workflow provides OpenCode automation for AI-assisted development.
-It can be invoked via slash commands (`/oc`, `/opencode`) on issue and PR comments or via manual workflow dispatch.
-
-### OpenCode Review Workflow (`opencode-review.yml`)
-
-The `opencode-review.yml` workflow provides OpenCode-driven PR review capabilities.
-
 ## Problem Matchers
 
 GitHub Actions problem matchers automatically annotate files with errors and
